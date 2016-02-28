@@ -1,0 +1,21 @@
+{
+  "name": "redis-workshop",
+  "description": "redis presentation to developers at Cappta",
+  "main": "index.js",
+  "authors": [
+    "Cesar Nobre"
+  ],
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/CesarNobre/redis-workshop",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal-js": "^2.6.2"
+  }
+}
