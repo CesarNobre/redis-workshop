@@ -1,8 +1,10 @@
 h1 {
-	font-size: 56px;
+	font-size: 90px !important;
 }
+
 body{
 	background-color:black;
 	color:white;
 	font-family: 'Merriweather Sans', sans-serif;
+	font-weight: bold !important;
 }
