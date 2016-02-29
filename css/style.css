@@ -8,3 +8,8 @@ body{
 	font-family: 'Merriweather Sans', sans-serif;
 	font-weight: bold !important;
 }
+.title-left{
+	width: 300px;
+	height: auto;
+	float:left;
+}
