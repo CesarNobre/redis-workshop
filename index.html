@@ -72,15 +72,40 @@
                     <h1>Pub/Sub</h1>
                 </section>
                 <section>
-                    <h1>Alta Disponibilidade</h1>
+                    <section>
+                        <h1>Alta Disponibilidade</h1>
+                    </section>
+                    <section>
+                        <div style="width:200px;height: 100px; border:1px solid white;padding:30px;">MASTER</div>    
+                    </section>
                 </section>
             </div>
         </div>
         <script src="js/reveal.min.js"></script>
         <script>
             Reveal.initialize({
-                controls:true,
+                dependencies: [
+                // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+                // Interpret Markdown in <section> elements
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+                // Syntax highlight for <code> elements
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+                // Zoom in and out with Alt+click
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+
+                // Speaker notes
+                { src: 'plugin/notes/notes.js', async: true },
+
+                // MathJax
+                { src: 'plugin/math/math.js', async: true }
+                ],
                 history:true,
+                controls:true
             });
         </script>
     </body>
