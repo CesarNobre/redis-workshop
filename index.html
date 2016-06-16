@@ -12,8 +12,7 @@
             <div class="slides">
                 <section>
                     <section>
-                        <h1 >Intro ao <span style="color:red;">redis</span></h1>
-                        <h3>César Nobre</h3>
+                        <h1 >Intro ao <span style="color:red;">REDIS</span></h1>
                     </section>
                 </section>
                 <section>
@@ -21,55 +20,116 @@
                         <span style="color:red!important">Re</span>mote <span style="color:red!important">Di</span>ctionary <span style="color:red!important">S</span>erver
                     </h1>
                     <br>
-                    <h3>Redis is an open source (BSD licensed)<br> in-memory data structure store, used as database,<br> cache and message broker</h3>
+                    <p>
+                        <h2>Redis é uma estrutura de armazenamento de dados<br> em memória que pode ser usado como:</h2>
+                        <br>    
+                        <ul><h2>
+                            <li>Banco de dados</li>
+                            <li>Cache</li>
+                            <li>Message broker</li>
+                        </h2></ul>
+                    </p>
                 </section>
                 <section>
                     <div>
-                        <h1>POR QUE?</h1>
-                    </div>
+                        <h1>Why?</h1>
+                    </div><br><br>
                     <div>
+                    <h2>
                         <ul>
-                            <li>ALTA PERFORMANCE</li>
-                            <li>FÁCIL REPLICAÇÃO</li>
-                            <li>SUPORTE A DADOS ESTRUTURADOS</li>
-                        </ul>    
+                            <li class="fragment fade-up" style="padding:10px;">ALTA PERFORMANCE</li>
+                            <li class="fragment fade-up" style="padding:10px;">ALTA DISPONIBILIDADE</li>
+                            <li class="fragment fade-up" style="padding:10px;">SUPORTE A DADOS ESTRUTURADOS</li>
+                            <li class="fragment fade-up" style="padding:10px;">BAIXÍSSIMO CONSUMO DE RECURSO</li>
+                        </ul>
+                    </h2>
                     </div>
                 </section>
                 <section>
                     <section>
                         <h1>QUEM USA?</h1>
                     </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ##INSTAGRAM
-                            - 70mb -> 1 milhão <!-- .element: class="fragment" data-fragment-index="1" -->
-                            - 21gb -> 300 milhões <!-- .element: class="fragment" data-fragment-index="2" -->
-                            - 300m -> 5gb <!-- .element: class="fragment" data-fragment-index="3" -->
-                        </script>
+                    <section>
+                        <img src="./images/twitter-logo.png" style="width:300px;height:200px;">
+                        <img src="./images/instagram-logo.png" style="width:300px;height:200px;"><br><br><br>
+                        <img src="./images/github-logo.png" style="width:300px;height:200px;">
+                        <img src="./images/stackoverflow-logo.png" style="width:300px;height:200px;">
                     </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ##TWITTER
-                        </script>
+                </section>
+                <section>
+                    <section>
+                        <h1>TIPO DE DADOS</h1>   
+                    </section>
+                    <section style="text-align:left;">
+                        <h1 style="text-align:center;">Hashes</h1><br>
+                        <h3 class="fragment fade-up">redis> hset cesarnobre nome "César"</h3><br>
+                        <h3 class="fragment fade-up">redis> hmset cesarnobre email "cesarnobrefilho@gmail.com" password "arroz"</h3><br>
+                        <h3 class="fragment fade-up">redis> hget cesarnobre name</h3><br>
+                        <h3 class="fragment fade-up">redis> "César"</h3><br>
+                        <h3 class="fragment fade-up">redis> hkeys cesarnobre</h3><br>
+                        <h3 class="fragment fade-up">1. nome</h3><br>
+                        <h3 class="fragment fade-up">2. email</h3><br>
+                        <h3 class="fragment fade-up">3. password</h3><br>
+                        <h3 class="fragment fade-up">redis> hvals cesarnobre</h3><br>
+                        <h3 class="fragment fade-up">1. "César"</h3><br>
+                        <h3 class="fragment fade-up">2. "cesarnobrefilho@gmail.com"</h3><br>
+                        <h3 class="fragment fade-up">3. "arroz"</h3>
                     </section>
                     <section>
-                        CASE STACK OVERFLOW
+                    <h2>
+                    OU SEJA:
+                        <pre><code class="javascript">
+                        {
+                            [
+                                "cesarnobre" : {
+                                    "nome" : "César",
+                                    "email" : "cesarnobrefilho@gmail.com",
+                                    "password" : "arroz"
+                                },
+                            ]
+                        }
+                        </code></pre>
+                    </h2>
+                        
+                    </section>
+                    <section>
+                        <h1>Listas</h1>
+                        <h3 class="fragment fade-up">redis> rpush arroz parborizado</h3><br>
+                        <h3 class="fragment fade-up">redis> rpush arroz normal</h3><br>
+                        <h3 class="fragment fade-up">redis> rpush arroz italiano</h3><br>
+                        <h3 class="fragment fade-up">redis> lrange arroz 0 2</h3><br>
+                        <h3 class="fragment fade-up">1. paborizado</h3><br>
+                        <h3 class="fragment fade-up">2. normal</h3><br>
+                        <h3 class="fragment fade-up">3. italiano</h3><br>
+                        <h3 class="fragment fade-up">redis> lrange arroz 0 1</h3><br>
+                        <h3 class="fragment fade-up">1. paborizado</h3><br>
+                        <h3 class="fragment fade-up">2. normal</h3><br>
+                    </section>
+                    <section>
+                        <h1>Sets</h1>
+                        <h3 class="fragment fade-up">redis> sadd users "cesar"</h3><br>
+                        <h3 class="fragment fade-up">redis> sadd users "edneia"</h3><br>
+                        <h3 class="fragment fade-up">redis> sadd users "pelé"</h3><br>
+                        <h3 class="fragment fade-up">redis> smembers users</h3><br>
+                        <h3 class="fragment fade-up">1. "pelé"</h3><br>
+                        <h3 class="fragment fade-up">2. "edneia"</h3><br>
+                        <h3 class="fragment fade-up">3. "cesar"</h3><br>
+                        <h3 class="fragment fade-up">redis> sadd admins "pelé"</h3><br>
+                        <h3 class="fragment fade-up">redis> sinter users admins</h3><br>
+                        <h3 class="fragment fade-up">1. "pelé"</h3><br>
+                        <h3 class="fragment fade-up">redis> sunion users admins</h3><br>
+                        <h3 class="fragment fade-up">1. "pelé"</h3><br>
+                        <h3 class="fragment fade-up">2. "edneia"</h3><br>
+                        <h3 class="fragment fade-up">3. "cesar"</h3><br>
+                        <h3 class="fragment fade-up">redis> sdiff users admins</h3><br>
+                        <h3 class="fragment fade-up">2. "edneia"</h3><br>
+                        <h3 class="fragment fade-up">3. "cesar"</h3><br>
                     </section>
                 </section>
                 <section>
-                    <h1>Tipos de Dados</h1>
-                    <h3>
-                        <ul>
-                            <li>Keys</li>
-                            <li>Strings</li>
-                            <li>Listas</li>
-                            <li>Hashes</li>
-                            <li>Sets</li>
-                        </ul>
-                    </h3>
-                </section>
-                <section>
-                    <h1>Pub/Sub</h1>
+                    <h1>Message Broker</h1>
+                    <br>
+                    <h2>Pub/Sub</h2>
                 </section>
                 <section>
                     <section>
@@ -78,9 +138,6 @@
                     <section>
                         <div style="width:200px;height: 100px; border:1px solid white;padding:30px;">MASTER</div>    
                     </section>
-                </section>
-                <section>
-                    <h1>Em c#</h1>    
                 </section>
             </div>
         </div>
