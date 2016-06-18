@@ -32,7 +32,7 @@
                 </section>
                 <section>
                     <div>
-                        <h1>Why?</h1>
+                        <h1>POR QUE USÁ-LO?</h1>
                     </div><br><br>
                     <div>
                     <h2>
@@ -62,15 +62,15 @@
                     </section>
                     <section style="text-align:left;">
                         <h1 style="text-align:center;">Hashes</h1><br>
-                        <h3 class="fragment fade-up">redis> hset cesarnobre nome "César"</h3><br>
-                        <h3 class="fragment fade-up">redis> hmset cesarnobre email "cesarnobrefilho@gmail.com" password "arroz"</h3><br>
-                        <h3 class="fragment fade-up">redis> hget cesarnobre name</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">hset</span> <span style="color:green">cesarnobre</span> nome "César"</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">hmset</span>  <span style="color:green">cesarnobre</span> email "cesarnobrefilho@gmail.com" password "arroz"</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">hget</span>  <span style="color:green">cesarnobre</span> name</h3><br>
                         <h3 class="fragment fade-up">redis> "César"</h3><br>
-                        <h3 class="fragment fade-up">redis> hkeys cesarnobre</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">hkeys</span>  <span style="color:green">cesarnobre</span></h3><br>
                         <h3 class="fragment fade-up">1. nome</h3><br>
                         <h3 class="fragment fade-up">2. email</h3><br>
                         <h3 class="fragment fade-up">3. password</h3><br>
-                        <h3 class="fragment fade-up">redis> hvals cesarnobre</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">hvals</span>  <span style="color:green">cesarnobre</span></h3><br>
                         <h3 class="fragment fade-up">1. "César"</h3><br>
                         <h3 class="fragment fade-up">2. "cesarnobrefilho@gmail.com"</h3><br>
                         <h3 class="fragment fade-up">3. "arroz"</h3>
@@ -94,50 +94,81 @@
                     </section>
                     <section>
                         <h1>Listas</h1>
-                        <h3 class="fragment fade-up">redis> rpush arroz parborizado</h3><br>
-                        <h3 class="fragment fade-up">redis> rpush arroz normal</h3><br>
-                        <h3 class="fragment fade-up">redis> rpush arroz italiano</h3><br>
-                        <h3 class="fragment fade-up">redis> lrange arroz 0 2</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">rpush</span> <span style="color:green">arroz</span> parborizado</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">rpush</span> <span style="color:green">arroz</span>  normal</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">rpush</span> <span style="color:green">arroz</span>  italiano</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">lrange</span> arroz 0 2</h3><br>
                         <h3 class="fragment fade-up">1. paborizado</h3><br>
                         <h3 class="fragment fade-up">2. normal</h3><br>
                         <h3 class="fragment fade-up">3. italiano</h3><br>
-                        <h3 class="fragment fade-up">redis> lrange arroz 0 1</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">lrange</span> arroz 0 1</h3><br>
                         <h3 class="fragment fade-up">1. paborizado</h3><br>
                         <h3 class="fragment fade-up">2. normal</h3><br>
                     </section>
                     <section>
                         <h1>Sets</h1>
-                        <h3 class="fragment fade-up">redis> sadd users "cesar"</h3><br>
-                        <h3 class="fragment fade-up">redis> sadd users "edneia"</h3><br>
-                        <h3 class="fragment fade-up">redis> sadd users "pelé"</h3><br>
-                        <h3 class="fragment fade-up">redis> smembers users</h3><br>
-                        <h3 class="fragment fade-up">1. "pelé"</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">sadd</span> <span style="color:green">users</span> "cesar"</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">sadd</span> <span style="color:green">users</span> "edneia"</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">sadd</span> <span style="color:green">users</span> "cassio"</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">smembers</span> <span style="color:green">users</span></h3><br>
+                        <h3 class="fragment fade-up">1. "cassio"</h3><br>
                         <h3 class="fragment fade-up">2. "edneia"</h3><br>
                         <h3 class="fragment fade-up">3. "cesar"</h3><br>
-                        <h3 class="fragment fade-up">redis> sadd admins "pelé"</h3><br>
-                        <h3 class="fragment fade-up">redis> sinter users admins</h3><br>
-                        <h3 class="fragment fade-up">1. "pelé"</h3><br>
-                        <h3 class="fragment fade-up">redis> sunion users admins</h3><br>
-                        <h3 class="fragment fade-up">1. "pelé"</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">sadd</span>  <span style="color:green">admins</span> "cassio"</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">sinter</span> <span style="color:green">users</span> <span style="color:green">admins</span></h3><br>
+                        <h3 class="fragment fade-up">1. "cassio"</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">sunion</span> <span style="color:green">users</span> <span style="color:green">admins</span></h3><br>
+                        <h3 class="fragment fade-up">1. "cassio"</h3><br>
                         <h3 class="fragment fade-up">2. "edneia"</h3><br>
                         <h3 class="fragment fade-up">3. "cesar"</h3><br>
-                        <h3 class="fragment fade-up">redis> sdiff users admins</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">sdiff</span> <span style="color:green">users</span> <span style="color:green">admins</span></h3><br>
                         <h3 class="fragment fade-up">2. "edneia"</h3><br>
                         <h3 class="fragment fade-up">3. "cesar"</h3><br>
                     </section>
                 </section>
                 <section>
-                    <h1>Message Broker</h1>
-                    <br>
-                    <h2>Pub/Sub</h2>
+                    <section data-transition="zoom">
+                        <h1>Message Broker</h1><br><br>
+                        <h2 class="fragment fade-up">plataforma intermediária para comunicação entre aplicações.</h2><br>
+                    </section>
+                    <section data-transition="zoom">
+                        <img src="./images/message-broker.gif" style="width:800px;">
+                    </section>
+                    <section data-transition="zoom">
+                        <img src="./images/message broker-topo.png" style="width:800px;">
+                    </section>
                 </section>
                 <section>
-                    <section>
+                    <section data-transition="zoom">
                         <h1>Alta Disponibilidade</h1>
                     </section>
-                    <section>
-                        <div style="width:200px;height: 100px; border:1px solid white;padding:30px;">MASTER</div>    
+                    <section data-transition="zoom">
+                        <img src="./images/master-slave.png">
                     </section>
+                    <section data-transition="zoom">
+                        <img src="./images/master-down.png">
+                    </section>
+                    <section>
+                     <h1>SENTINELAS!</h1> <br>
+                     <h2>
+                        <ul>
+                            <li class="fragment fade-up">Monitora</li><br>
+                            <li class="fragment fade-up">Notifica</li><br>
+                            <li class="fragment fade-up">Failover Automático</li><br>
+                            <li class="fragment fade-up">Provedor de Configurações</li><br>
+                        </ul>
+                    </h2>
+                    </section>
+                    <section data-transition="zoom">
+                        <img src="./images/sentinels-master-on.png">      
+                    </section>
+                    <section data-transition="zoom">
+                        <img src="./images/sentinels-working-pt1.png">   
+                    </section>
+                    <section data-transition="zoom">
+                        <img src="./images/sentinels-working-pt2.png">   
+                    </section>
+                    
                 </section>
             </div>
         </div>
@@ -149,9 +180,12 @@
                 dependencies: [
                 // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
 
+                 { src: 'js/zoom.js', async: true },
+
                 // Interpret Markdown in <section> elements
                 { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); }
+                 },
                 ],
                 // Syntax highlight for <code> elements
                 history:true,
