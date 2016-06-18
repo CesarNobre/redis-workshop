@@ -55,10 +55,26 @@
                         <img src="./images/github-logo.png" style="width:300px;height:200px;">
                         <img src="./images/stackoverflow-logo.png" style="width:300px;height:200px;">
                     </section>
+                    <section>
+                        <h1>Instagram</h1><br>
+                        <h2 class="fragment fade-up">Problema: Mapear o id de 300 milhões de fotos e caber em um EC2 de 17GB</h2><br>
+                        <h3 class="fragment fade-up"> Com redis usando GET/SET: 21GB</h3><br>
+                        <h3 class="fragment fade-up">Com redis tunado usando Hashes: 5GB</h3><br>
+                    </section>
                 </section>
                 <section>
                     <section>
                         <h1>TIPO DE DADOS</h1>   
+                    </section>
+                    <section>
+                        <h1>String</h1><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">set</span> <span style="color:green">chave</span> valor</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">get</span> <span style="color:green">chave</span> </h3><br>
+                        <h3 class="fragment fade-up">redis> valor</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">set</span> <span style="color:green">token</span> merchantCheckoutId</h3><br>
+                        <h3 class="fragment fade-up">redis> <span style="color:red">get</span> <span style="color:green">token</span></h3><br>
+                        <h3 class="fragment fade-up">MerchantCheckoutId</h3><br>
+
                     </section>
                     <section style="text-align:left;">
                         <h1 style="text-align:center;">Hashes</h1><br>
