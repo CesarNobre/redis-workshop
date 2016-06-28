@@ -1,3 +1,3 @@
 # redis-workshop
 
-presentation redis
+http://cesarnobre.github.io/redis-workshop/
